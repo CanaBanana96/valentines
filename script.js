@@ -177,7 +177,7 @@ document.addEventListener("DOMContentLoaded", () => {
   audio.volume = 0.1;
   audio.loop = true;
 
-  let unlocked = false;
+  let unlocked = true;
 
   // Restore state
   const saved = localStorage.getItem(MUSIC_KEY);
