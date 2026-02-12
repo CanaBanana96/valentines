@@ -177,7 +177,7 @@ document.addEventListener("DOMContentLoaded", () => {
   audio.volume = 0.1;
   audio.loop = true;
 
-  let unlocked = true;
+  let unlocked = false;
 
   // Restore state
   const saved = localStorage.getItem(MUSIC_KEY);
@@ -185,7 +185,7 @@ document.addEventListener("DOMContentLoaded", () => {
     try{
       const state = JSON.parse(saved);
       audio.currentTime = state.time || 0;
-      unlocked = state.unlocked || true;
+      unlocked = state.unlocked || false;
 
       if (!state.playing){
         toggle.classList.add("paused");
