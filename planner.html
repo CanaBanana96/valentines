@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<!-- Firebase COMPAT SDKs (required for global firebase object) -->
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+
+<script>
+  const firebaseConfig = {
+    apiKey: "AIzaSyDm0NBbGYssb13BB-YjR275jtf16o47y7s",
+    authDomain: "valentines-day-ef6aa.firebaseapp.com",
+    projectId: "valentines-day-ef6aa",
+    storageBucket: "valentines-day-ef6aa.appspot.com",
+    messagingSenderId: "711111807408",
+    appId: "1:711111807408:web:5a847cbf61ece2e63a0675"
+  };
+
+  firebase.initializeApp(firebaseConfig);
+</script>
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script>
+  (function(){
+    emailjs.init("BfrTwj-5O2Zb9cof2");
+  })();
+</script>
+
+<script src="script.js"></script>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Date Planner 💌</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="page">
+    <main class="card">
+      <h1>Our Date Night Plan 💌</h1>
+      <p class="kicker">Pick something cozy we can do from home.</p>
+
+      <form class="form" id="planForm">
+
+        <label>
+          Date vibe
+          <select id="dateType" name="type">
+            <option value="">Choose our night…</option>
+            <option value="drinks">🍸 Drinks & Us Time</option>
+            <option value="dinner">🫕 Dinner Together</option>
+            <option value="movie">🎬 😉 Movie Night 😚</option>
+            <option value="music"> 🍃 Smoke ? 💨</option>
+            <option value="games">💫 Chandini Bar </option>
+          </select>
+        </label>
+
+        <section id="dateDetails" class="dateDetails" hidden>
+          <div class="dateInner">
+            <h3 id="dateTitle"></h3>
+            <p id="dateDesc"></p>
+
+            <div class="lines">
+              <div>
+                <span class="label">You</span>
+                <p id="herLine"></p>
+              </div>
+              <div>
+                <span class="label">Me</span>
+                <p id="myLine"></p>
+              </div>
+            </div>
+
+            <p class="noteFromMe" id="noteFromMe"></p>
+          </div>
+        </section>
+
+        <div class="row">
+  <label>
+    Day
+    <select name="day" id="daySelect" required>
+      <option value="">Pick a day…</option>
+      <option value="Friday">Friday</option>
+      <option value="Saturday">Saturday</option>
+      <option value="Sunday">Sunday</option>
+    </select>
+  </label>
+
+  <label>
+    Time
+    <select name="timeVibe" id="timeVibe" required>
+      <option value="">Pick a vibe…</option>
+      <option value="morning">Your morning ☀️</option>
+      <option value="night">Your night 🌙</option>
+    </select>
+  </label>
+</div>
+
+
+        <label>
+          Note (optional)
+          <textarea name="note" rows="3" placeholder="Anything you want for our night?"></textarea>
+        </label>
+
+        <button class="btn primary" type="submit">Save 💾</button>
+        <p class="saved" id="savedMsg"></p>
+      </form>
+
+      <div class="btnRow">
+        <a class="btn subtle" href="yes.html">Back</a>
+        <a class="btn subtle" href="index.html">Home</a>
+      </div>
+    </main>
+  </div>
+ <button id="musicToggle" class="musicToggle" aria-label=" Pause ⏯️"></button>
+  <audio id="bgMusic" preload="auto"></audio>
+  <div id="hearts"></div>
+  <div id="heartConfirm">
+  ❤️
+</div>
+</body>
+</html>

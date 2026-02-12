@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<!-- Firebase COMPAT SDKs (required for global firebase object) -->
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+
+<script>
+  const firebaseConfig = {
+    apiKey: "AIzaSyDm0NBbGYssb13BB-YjR275jtf16o47y7s",
+    authDomain: "valentines-day-ef6aa.firebaseapp.com",
+    projectId: "valentines-day-ef6aa",
+    storageBucket: "valentines-day-ef6aa.appspot.com",
+    messagingSenderId: "711111807408",
+    appId: "1:711111807408:web:5a847cbf61ece2e63a0675"
+  };
+
+  firebase.initializeApp(firebaseConfig);
+</script>
+
+<script src="script.js"></script>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>It’s a Yes 💖</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="page">
+    <main class="card">
+      <h1>Yay 💕</h1>
+      <p class="kicker">Omg guys she chose me, EUUUU</p>
+      <p>Choose what you're feeling like.</p>
+
+      <div class="btnRow">
+        <a class="btn primary" href="planner.html">Plan Our Night →</a>
+        <a class="btn subtle" href="index.html">Back</a>
+      </div>
+    </main>
+  </div>
+
+  <div id="hearts"></div>
+   <button id="musicToggle" class="musicToggle" aria-label=" Pause ⏯️"></button>
+  <audio id="bgMusic" preload="auto"></audio>
+</body>
+</html>
